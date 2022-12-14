@@ -23,6 +23,13 @@ def math_test():
         denominator += 1
     return str(result)
 
+@app.route('/simple-math')
+def simple_math():
+    a = 999
+    b = 888
+    c = 777
+    return str(a*b/c)
+
 @app.route('/get-from-db')
 def get_from_db():
     with client.cursor() as cursor:
